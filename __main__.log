@@ -1,0 +1,7 @@
+__main__ 2023-01-25 02:17:53,990 INFO Начало логгироваия __main__
+__main__ 2023-01-25 02:17:53,990 INFO Start reading file from inn
+__main__ 2023-01-25 02:17:53,997 INFO File inn_org\inn_org.csv read successfully
+__main__ 2023-01-25 02:17:53,997 INFO Driver setup and site connection
+__main__ 2023-01-25 02:17:55,188 INFO Connection succeeded
+__main__ 2023-01-25 02:17:55,188 INFO Getting started with the site
+__main__ 2023-01-25 02:18:06,514 INFO End of the site
