@@ -73,10 +73,13 @@ def work_selenium(logger, inn_list):
         driver.get('https://www.gosuslugi.ru/itorgs')
         delay = 6  # seconds
         try:
-            elem_search = WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, "//input[@class='search-input ng-untouched ng-pristine ng-valid']")))
-            print('fgddfg')
-            elem_search.send_keys('sdsdsdsdsd')
-            elem_search.send_keys(Keys.RETURN)
+            for i in inn_list:
+                elem_search = WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, "//input[@class='search-input ng-untouched ng-pristine ng-valid']")))
+                elem_search.send_keys(i)
+                elem_search.send_keys(Keys.RETURN)
+                elem_search = WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, "//a[@class='link-plain small']")))
+                elem_search.click()
+
             time.sleep(10)
         except TimeoutException:
             print("Loading took too much time!")

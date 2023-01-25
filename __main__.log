@@ -1,7 +1,84 @@
-__main__ 2023-01-25 02:17:53,990 INFO Начало логгироваия __main__
-__main__ 2023-01-25 02:17:53,990 INFO Start reading file from inn
-__main__ 2023-01-25 02:17:53,997 INFO File inn_org\inn_org.csv read successfully
-__main__ 2023-01-25 02:17:53,997 INFO Driver setup and site connection
-__main__ 2023-01-25 02:17:55,188 INFO Connection succeeded
-__main__ 2023-01-25 02:17:55,188 INFO Getting started with the site
-__main__ 2023-01-25 02:18:06,514 INFO End of the site
+__main__ 2023-01-25 23:15:01,236 INFO Начало логгироваия __main__
+__main__ 2023-01-25 23:15:01,236 INFO Start reading file from inn
+__main__ 2023-01-25 23:15:01,244 INFO File inn_org\inn_org.csv read successfully
+__main__ 2023-01-25 23:15:01,244 INFO Driver setup and site connection
+__main__ 2023-01-25 23:15:02,356 INFO Connection succeeded
+__main__ 2023-01-25 23:15:02,356 INFO Getting started with the site
+__main__ 2023-01-25 23:15:09,877 ERROR Error while working with the site. ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+Traceback (most recent call last):
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\urllib3\connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\urllib3\connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Acer\Desktop\Программирование\selenium\selenium_python\main.py", line 73, in work_selenium
+    driver.get('https://www.gosuslugi.ru/itorgs')
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 438, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 290, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 311, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\urllib3\request.py", line 78, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\urllib3\request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\urllib3\util\retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\urllib3\packages\six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\urllib3\connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\Acer\Desktop\Программирование\selenium\venv\Lib\site-packages\urllib3\connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
