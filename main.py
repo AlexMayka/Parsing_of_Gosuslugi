@@ -14,7 +14,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
 
 
-def logging_work():
+def logging_work() -> logging:
     """
     Настройки для логгирования скрипта;
     Script logging settings;
@@ -23,8 +23,9 @@ def logging_work():
     py_logger = logging.getLogger(__name__)
     py_logger.setLevel(logging.INFO)
 
-    py_handler = logging.FileHandler(f"log_for_work.log", mode='w')
-    py_formatter = logging.Formatter("%(name)s %(asctime)s %(levelname)s %(message)s")
+    py_handler = logging.FileHandler(r"log_for_work.log", mode='w')
+    py_formatter = logging.Formatter("%(name)s %(asctime)s "
+                                     "%(levelname)s %(message)s")
 
     py_handler.setFormatter(py_formatter)
     py_logger.addHandler(py_handler)
@@ -34,7 +35,7 @@ def logging_work():
     return py_logger
 
 
-def read_csv_inn_com(logger):
+def read_csv_inn_com(logger: object = logging) -> list | bool:
     """
     Функция для получения инн компаний из csv-файла;
     Function to get company TIN from csv file;
@@ -42,7 +43,7 @@ def read_csv_inn_com(logger):
     :return: inn_list - список инн компаний (list of inn companies);
     """
 
-    logger.info(f'Start reading file from inn')
+    logger.info('Start reading file from inn')
     try:
 
         path_csv = r"inn_org\inn_org.csv"
@@ -57,28 +58,32 @@ def read_csv_inn_com(logger):
         return False
 
 
-def check_response(driver, df, inn):
+def check_response(driver:object = webdriver,
+                   df: object = pd.DataFrame,
+                   inn: object = int) -> pd.DataFrame:
     """
     Функция проверки и записи в df;
     The function of checking and writing to df;
-
-    :input:
-            driver - элемент класса браузера (browser class element);
-            df - Data Frame для записи результатов (Data Frame for recording results);
-            inn - инн компании (inn company)
-
-    :return:
-            df - Data Frame с новыми данными ( Data Frame with new data);
+    @param driver: элемент класса браузера (browser class element);
+    @param df: Data Frame для записи результатов (Data Frame
+                   for recording results);
+    @param inn: инн компании (inn company)
+    @return: Data Frame с новыми данными ( Data Frame with new data);
     """
-
     delay = 2
     logger.info(f'Start_check_inn - {inn}')
     try:
-        check_element_response = WebDriverWait(driver, delay).until(
-            EC.presence_of_element_located((By.XPATH, "//img[@class='img-ok']"))
+        WebDriverWait(driver, delay).until(
+            EC.presence_of_element_located(
+                (
+                    By.XPATH,
+                    "//img[@class='img-ok']")
+            )
         )
-        elem_text_response = driver.find_element(By.XPATH, "//div[@class='mt-12 text-help']")
-
+        elem_text_response = driver.find_element(
+            By.XPATH,
+            "//div[@class='mt-12 text-help']"
+        )
         name_of_company = " ".join(elem_text_response.text.split(',')[:-1])
 
         logger.info(f'True_check_inn - {inn}')
@@ -107,20 +112,21 @@ def check_response(driver, df, inn):
         return df
 
 
-def work_selenium(logger, inn_list, index_inn_list=0, df_verified_inn=pd.DataFrame()):
+def work_selenium(
+        logger: object = logging,
+        inn_list: object = list,
+        index_inn_list: int = 0,
+        df_verified_inn: object = pd.DataFrame()
+    ) -> pd.DataFrame:
     """
     Функция работы selenium;
     Selenium work function;
-
-    :input:
-            logger - настройки логгирования (logging settings);
-            inn_list - список с инн компаний (list with inn of companies);
-            index_inn_list - индекс списка inn_list, с которого начнется новая проверка
-            (the index of the inn_list from which the new check will start)
-            df_verified_inn - Data Frame для записи результатов (Data Frame for recording results);
-
-    :return:
-            df_verified_inn - Data Frame с результатами проверки (Data Frame with test results);
+    @param logger: настройки логгирования (logging settings);
+    @param inn_list: список с инн компаний (list with inn of companies);
+    @param index_inn_list: индекс списка inn_list, с которого начнется новая проверка;
+    (the index of the inn_list from which the new check will start);
+    @param df_verified_inn: Data Frame для записи результатов (Data Frame for recording results);
+    @return: Data Frame с результатами проверки (Data Frame with test results);
     """
 
     try:
@@ -148,6 +154,7 @@ def work_selenium(logger, inn_list, index_inn_list=0, df_verified_inn=pd.DataFra
                 elem_search_string.clear()
                 elem_search_string.send_keys(inn)
                 elem_search_string.click()
+                elem_search_string.send_keys(Keys.ENTER)
                 elem_search_string.send_keys(Keys.ENTER)
 
                 df_verified_inn = check_response(driver, df_verified_inn, inn)
