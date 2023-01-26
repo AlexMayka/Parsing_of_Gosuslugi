@@ -58,9 +58,11 @@ def read_csv_inn_com(logger: object = logging) -> list | bool:
         return False
 
 
-def check_response(driver:object = webdriver,
-                   df: object = pd.DataFrame,
-                   inn: object = int) -> pd.DataFrame:
+def check_response(
+        driver: object = webdriver,
+        df: object = pd.DataFrame,
+        inn: object = int) -> pd.DataFrame:
+
     """
     Функция проверки и записи в df;
     The function of checking and writing to df;
@@ -116,26 +118,27 @@ def work_selenium(
         logger: object = logging,
         inn_list: object = list,
         index_inn_list: int = 0,
-        df_verified_inn: object = pd.DataFrame()
-    ) -> pd.DataFrame:
+        df_verified_inn: object = pd.DataFrame()) -> pd.DataFrame:
     """
     Функция работы selenium;
     Selenium work function;
     @param logger: настройки логгирования (logging settings);
     @param inn_list: список с инн компаний (list with inn of companies);
-    @param index_inn_list: индекс списка inn_list, с которого начнется новая проверка;
+    @param index_inn_list: индекс списка inn_list,
+    с которого начнется новая проверка;
     (the index of the inn_list from which the new check will start);
-    @param df_verified_inn: Data Frame для записи результатов (Data Frame for recording results);
+    @param df_verified_inn: Data Frame для записи результатов
+    (Data Frame for recording results);
     @return: Data Frame с результатами проверки (Data Frame with test results);
     """
 
     try:
-        logger.info(f'Driver setup and site connection')
+        logger.info('Driver setup and site connection')
 
         path_driver = r'Drivers\chromedriver_win32\chromedriver.exe'
         driver = webdriver.Chrome(executable_path=path_driver)
 
-        logger.info(f'Connection succeeded')
+        logger.info('Connection succeeded')
 
     except Exception as Error_connect_selenium:
         logger.exception(f'Error connecting to site. {Error_connect_selenium}')
@@ -149,8 +152,8 @@ def work_selenium(
             try:
                 inn = inn_list[index_inn_list]
                 logger.info(f'Search_inn_{inn}')
-                elem_search_string = WebDriverWait(driver, delay).until(EC.presence_of_element_located(
-                    (By.XPATH, "//input[@class='search-input ng-untouched ng-pristine ng-valid']")))
+                elem_search_string = WebDriverWait(driver, delay)\
+                    .until(EC.presence_of_element_located((By.XPATH, "//input[@class='search-input ng-untouched ng-pristine ng-valid']")))
                 elem_search_string.clear()
                 elem_search_string.send_keys(inn)
                 elem_search_string.click()
