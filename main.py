@@ -147,7 +147,7 @@ def work_selenium(logger, inn_list, index_inn_list=0, df_verified_inn=pd.DataFra
                     (By.XPATH, "//input[@class='search-input ng-untouched ng-pristine ng-valid']")))
                 elem_search_string.clear()
                 elem_search_string.send_keys(inn)
-                time.sleep(0.3)
+                elem_search_string.click()
                 elem_search_string.send_keys(Keys.ENTER)
 
                 df_verified_inn = check_response(driver, df_verified_inn, inn)
@@ -158,7 +158,7 @@ def work_selenium(logger, inn_list, index_inn_list=0, df_verified_inn=pd.DataFra
                 elem_return_button.click()
 
                 index_inn_list += 1
-                if index_inn_list % 25 == 0:
+                if index_inn_list % 50 == 0:
                     driver.close()
                     logger.info(f'new_crusade')
                     time.sleep(60)
