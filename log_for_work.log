@@ -1,0 +1,156 @@
+__main__ 2023-01-27 00:56:30,489 INFO Begin logging __main__
+__main__ 2023-01-27 00:56:30,490 INFO Start reading file from inn
+__main__ 2023-01-27 00:56:30,490 INFO File inn_org\inn_org.csv read successfully
+__main__ 2023-01-27 00:56:30,491 INFO Driver setup and site connection
+__main__ 2023-01-27 00:56:31,591 INFO Connection succeeded
+__main__ 2023-01-27 00:56:31,591 INFO Getting started with the site 0
+__main__ 2023-01-27 00:56:32,463 INFO Search_inn_5262128494
+__main__ 2023-01-27 00:56:33,518 INFO Start_check_inn - 5262128494
+__main__ 2023-01-27 00:56:34,048 INFO False_check_inn - 5262128494
+__main__ 2023-01-27 00:56:34,050 INFO Finish_check_inn - 5262128494
+__main__ 2023-01-27 00:56:34,050 INFO Back_in_search_string - 5262128494
+__main__ 2023-01-27 00:56:34,100 INFO Search_inn_6154064277
+__main__ 2023-01-27 00:56:34,511 INFO Start_check_inn - 6154064277
+__main__ 2023-01-27 00:56:35,043 INFO True_check_inn - 6154064277
+__main__ 2023-01-27 00:56:35,044 INFO Finish_check_inn - 6154064277
+__main__ 2023-01-27 00:56:35,045 INFO Back_in_search_string - 6154064277
+__main__ 2023-01-27 00:56:35,097 INFO Search_inn_7717129716
+__main__ 2023-01-27 00:56:35,509 INFO Start_check_inn - 7717129716
+__main__ 2023-01-27 00:56:36,042 INFO True_check_inn - 7717129716
+__main__ 2023-01-27 00:56:36,044 INFO Finish_check_inn - 7717129716
+__main__ 2023-01-27 00:56:36,044 INFO Back_in_search_string - 7717129716
+__main__ 2023-01-27 00:56:36,085 INFO Search_inn_5024013262
+__main__ 2023-01-27 00:56:36,496 INFO Start_check_inn - 5024013262
+__main__ 2023-01-27 00:56:37,019 INFO False_check_inn - 5024013262
+__main__ 2023-01-27 00:56:37,020 INFO Finish_check_inn - 5024013262
+__main__ 2023-01-27 00:56:37,020 INFO Back_in_search_string - 5024013262
+__main__ 2023-01-27 00:56:37,062 INFO Search_inn_2724093028
+__main__ 2023-01-27 00:56:37,471 INFO Start_check_inn - 2724093028
+__main__ 2023-01-27 00:56:37,994 INFO False_check_inn - 2724093028
+__main__ 2023-01-27 00:56:37,996 INFO Finish_check_inn - 2724093028
+__main__ 2023-01-27 00:56:37,996 INFO Back_in_search_string - 2724093028
+__main__ 2023-01-27 00:56:38,037 INFO Search_inn_7728617169
+__main__ 2023-01-27 00:56:38,442 INFO Start_check_inn - 7728617169
+__main__ 2023-01-27 00:56:38,966 INFO False_check_inn - 7728617169
+__main__ 2023-01-27 00:56:38,967 INFO Finish_check_inn - 7728617169
+__main__ 2023-01-27 00:56:38,967 INFO Back_in_search_string - 7728617169
+__main__ 2023-01-27 00:56:39,011 INFO Search_inn_7710625200
+__main__ 2023-01-27 00:56:39,420 INFO Start_check_inn - 7710625200
+__main__ 2023-01-27 00:56:39,941 INFO False_check_inn - 7710625200
+__main__ 2023-01-27 00:56:39,943 INFO Finish_check_inn - 7710625200
+__main__ 2023-01-27 00:56:39,943 INFO Back_in_search_string - 7710625200
+__main__ 2023-01-27 00:56:39,984 INFO Search_inn_7726074870
+__main__ 2023-01-27 00:56:40,395 INFO Start_check_inn - 7726074870
+__main__ 2023-01-27 00:56:40,916 INFO False_check_inn - 7726074870
+__main__ 2023-01-27 00:56:40,918 INFO Finish_check_inn - 7726074870
+__main__ 2023-01-27 00:56:40,918 INFO Back_in_search_string - 7726074870
+__main__ 2023-01-27 00:56:40,963 INFO Search_inn_7819035190
+__main__ 2023-01-27 00:56:41,370 INFO Start_check_inn - 7819035190
+__main__ 2023-01-27 00:56:41,903 INFO True_check_inn - 7819035190
+__main__ 2023-01-27 00:56:41,905 INFO Finish_check_inn - 7819035190
+__main__ 2023-01-27 00:56:41,905 INFO Back_in_search_string - 7819035190
+__main__ 2023-01-27 00:56:41,948 INFO Search_inn_6904008332
+__main__ 2023-01-27 00:56:42,350 INFO Start_check_inn - 6904008332
+__main__ 2023-01-27 00:56:42,884 INFO True_check_inn - 6904008332
+__main__ 2023-01-27 00:56:42,885 INFO Finish_check_inn - 6904008332
+__main__ 2023-01-27 00:56:42,885 INFO Back_in_search_string - 6904008332
+__main__ 2023-01-27 00:56:42,928 INFO Search_inn_7704014274
+__main__ 2023-01-27 00:56:43,330 INFO Start_check_inn - 7704014274
+__main__ 2023-01-27 00:56:43,850 INFO False_check_inn - 7704014274
+__main__ 2023-01-27 00:56:43,851 INFO Finish_check_inn - 7704014274
+__main__ 2023-01-27 00:56:43,852 INFO Back_in_search_string - 7704014274
+__main__ 2023-01-27 00:56:43,891 INFO Search_inn_7106008891
+__main__ 2023-01-27 00:56:44,291 INFO Start_check_inn - 7106008891
+__main__ 2023-01-27 00:56:44,813 INFO False_check_inn - 7106008891
+__main__ 2023-01-27 00:56:44,815 INFO Finish_check_inn - 7106008891
+__main__ 2023-01-27 00:56:44,815 INFO Back_in_search_string - 7106008891
+__main__ 2023-01-27 00:56:44,856 INFO Search_inn_7714102360
+__main__ 2023-01-27 00:56:45,265 INFO Start_check_inn - 7714102360
+__main__ 2023-01-27 00:56:45,797 INFO True_check_inn - 7714102360
+__main__ 2023-01-27 00:56:45,798 INFO Finish_check_inn - 7714102360
+__main__ 2023-01-27 00:56:45,798 INFO Back_in_search_string - 7714102360
+__main__ 2023-01-27 00:56:45,840 INFO Search_inn_7735047640
+__main__ 2023-01-27 00:56:46,258 INFO Start_check_inn - 7735047640
+__main__ 2023-01-27 00:56:46,782 INFO False_check_inn - 7735047640
+__main__ 2023-01-27 00:56:46,783 INFO Finish_check_inn - 7735047640
+__main__ 2023-01-27 00:56:46,784 INFO Back_in_search_string - 7735047640
+__main__ 2023-01-27 00:56:46,824 INFO Search_inn_7733284010
+__main__ 2023-01-27 00:56:47,231 INFO Start_check_inn - 7733284010
+__main__ 2023-01-27 00:56:47,765 INFO True_check_inn - 7733284010
+__main__ 2023-01-27 00:56:47,766 INFO Finish_check_inn - 7733284010
+__main__ 2023-01-27 00:56:47,766 INFO Back_in_search_string - 7733284010
+__main__ 2023-01-27 00:56:47,810 INFO Search_inn_7702270040
+__main__ 2023-01-27 00:56:48,211 INFO Start_check_inn - 7702270040
+__main__ 2023-01-27 00:56:48,744 INFO True_check_inn - 7702270040
+__main__ 2023-01-27 00:56:48,745 INFO Finish_check_inn - 7702270040
+__main__ 2023-01-27 00:56:48,745 INFO Back_in_search_string - 7702270040
+__main__ 2023-01-27 00:56:48,786 INFO Search_inn_7724244406
+__main__ 2023-01-27 00:56:49,197 INFO Start_check_inn - 7724244406
+__main__ 2023-01-27 00:56:49,730 INFO True_check_inn - 7724244406
+__main__ 2023-01-27 00:56:49,731 INFO Finish_check_inn - 7724244406
+__main__ 2023-01-27 00:56:49,731 INFO Back_in_search_string - 7724244406
+__main__ 2023-01-27 00:56:49,772 INFO Search_inn_7743028263
+__main__ 2023-01-27 00:56:50,175 INFO Start_check_inn - 7743028263
+__main__ 2023-01-27 00:56:50,709 INFO True_check_inn - 7743028263
+__main__ 2023-01-27 00:56:50,710 INFO Finish_check_inn - 7743028263
+__main__ 2023-01-27 00:56:50,710 INFO Back_in_search_string - 7743028263
+__main__ 2023-01-27 00:56:50,752 INFO Search_inn_7702651292
+__main__ 2023-01-27 00:56:51,162 INFO Start_check_inn - 7702651292
+__main__ 2023-01-27 00:56:51,695 INFO True_check_inn - 7702651292
+__main__ 2023-01-27 00:56:51,696 INFO Finish_check_inn - 7702651292
+__main__ 2023-01-27 00:56:51,696 INFO Back_in_search_string - 7702651292
+__main__ 2023-01-27 00:56:51,737 INFO Search_inn_5408100040
+__main__ 2023-01-27 00:56:52,137 INFO Start_check_inn - 5408100040
+__main__ 2023-01-27 00:56:52,660 INFO False_check_inn - 5408100040
+__main__ 2023-01-27 00:56:52,662 INFO Finish_check_inn - 5408100040
+__main__ 2023-01-27 00:56:52,662 INFO Back_in_search_string - 5408100040
+__main__ 2023-01-27 00:56:52,703 INFO Search_inn_7448055870
+__main__ 2023-01-27 00:56:53,104 INFO Start_check_inn - 7448055870
+__main__ 2023-01-27 00:56:53,638 INFO True_check_inn - 7448055870
+__main__ 2023-01-27 00:56:53,640 INFO Finish_check_inn - 7448055870
+__main__ 2023-01-27 00:56:53,640 INFO Back_in_search_string - 7448055870
+__main__ 2023-01-27 00:56:53,682 INFO Search_inn_1655104877
+__main__ 2023-01-27 00:56:54,094 INFO Start_check_inn - 1655104877
+__main__ 2023-01-27 00:56:54,617 INFO False_check_inn - 1655104877
+__main__ 2023-01-27 00:56:54,618 INFO Finish_check_inn - 1655104877
+__main__ 2023-01-27 00:56:54,618 INFO Back_in_search_string - 1655104877
+__main__ 2023-01-27 00:56:54,659 INFO Search_inn_3666005367
+__main__ 2023-01-27 00:56:55,065 INFO Start_check_inn - 3666005367
+__main__ 2023-01-27 00:56:55,587 INFO False_check_inn - 3666005367
+__main__ 2023-01-27 00:56:55,589 INFO Finish_check_inn - 3666005367
+__main__ 2023-01-27 00:56:55,589 INFO Back_in_search_string - 3666005367
+__main__ 2023-01-27 00:56:55,630 INFO Search_inn_1831090125
+__main__ 2023-01-27 00:56:56,041 INFO Start_check_inn - 1831090125
+__main__ 2023-01-27 00:56:56,564 INFO False_check_inn - 1831090125
+__main__ 2023-01-27 00:56:56,565 INFO Finish_check_inn - 1831090125
+__main__ 2023-01-27 00:56:56,565 INFO Back_in_search_string - 1831090125
+__main__ 2023-01-27 00:56:56,609 INFO Search_inn_1831101514
+__main__ 2023-01-27 00:56:57,016 INFO Start_check_inn - 1831101514
+__main__ 2023-01-27 00:56:57,538 INFO False_check_inn - 1831101514
+__main__ 2023-01-27 00:56:57,539 INFO Finish_check_inn - 1831101514
+__main__ 2023-01-27 00:56:57,539 INFO Back_in_search_string - 1831101514
+__main__ 2023-01-27 00:57:13,748 INFO new_crusade
+__main__ 2023-01-27 00:58:13,748 INFO Driver setup and site connection
+__main__ 2023-01-27 00:58:14,827 INFO Connection succeeded
+__main__ 2023-01-27 00:58:14,827 INFO Getting started with the site 25
+__main__ 2023-01-27 00:58:15,340 INFO Search_inn_1831088951
+__main__ 2023-01-27 00:58:16,337 INFO Start_check_inn - 1831088951
+__main__ 2023-01-27 00:58:16,869 INFO False_check_inn - 1831088951
+__main__ 2023-01-27 00:58:16,870 INFO Finish_check_inn - 1831088951
+__main__ 2023-01-27 00:58:16,870 INFO Back_in_search_string - 1831088951
+__main__ 2023-01-27 00:58:16,922 INFO Search_inn_1831053525
+__main__ 2023-01-27 00:58:17,333 INFO Start_check_inn - 1831053525
+__main__ 2023-01-27 00:58:17,854 INFO False_check_inn - 1831053525
+__main__ 2023-01-27 00:58:17,856 INFO Finish_check_inn - 1831053525
+__main__ 2023-01-27 00:58:17,856 INFO Back_in_search_string - 1831053525
+__main__ 2023-01-27 00:58:17,900 INFO Search_inn_7715532020
+__main__ 2023-01-27 00:58:18,314 INFO Start_check_inn - 7715532020
+__main__ 2023-01-27 00:58:18,846 INFO True_check_inn - 7715532020
+__main__ 2023-01-27 00:58:18,847 INFO Finish_check_inn - 7715532020
+__main__ 2023-01-27 00:58:18,847 INFO Back_in_search_string - 7715532020
+__main__ 2023-01-27 00:58:18,890 INFO Search_inn_7715635428
+__main__ 2023-01-27 00:58:19,304 INFO Start_check_inn - 7715635428
+__main__ 2023-01-27 00:58:19,827 INFO False_check_inn - 7715635428
+__main__ 2023-01-27 00:58:19,829 INFO Finish_check_inn - 7715635428
+__main__ 2023-01-27 00:58:19,829 INFO Back_in_search_string - 7715635428
+__main__ 2023-01-27 00:58:19,873 INFO Finish work selenium
