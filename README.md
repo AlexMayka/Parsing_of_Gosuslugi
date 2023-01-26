@@ -10,7 +10,7 @@
 Входящие данные: <br>
 Файл '.csv' с ИНН организаций (..\inn_org\inn_org.csv)
 
-![input.png](img\input.png)
+![input.png](img%input.png)
 
 Технологии:<br>
 <ul>
@@ -49,4 +49,4 @@
     <li>Колонка 3: IT_accreditation - Статус аккредитации-</li>
 </ul>
 
-![out.png](img\out.png)
+![out.png](img%out.png)
