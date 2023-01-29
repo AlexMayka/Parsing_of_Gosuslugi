@@ -58,20 +58,16 @@ def read_csv_inn_com(logger: object = logging) -> list | bool:
         return False
 
 
-def check_response(
-        driver: object = webdriver,
-        df: object = pd.DataFrame,
-        inn: object = int) -> pd.DataFrame:
-
+def check_response(driver: object = webdriver, df: object = pd.DataFrame, inn: object = int) -> pd.DataFrame:
     """
     Функция проверки и записи в df;
     The function of checking and writing to df;
     @param driver: элемент класса браузера (browser class element);
-    @param df: Data Frame для записи результатов (Data Frame
-                   for recording results);
+    @param df: Data Frame для записи результатов (Data Frame for recording results);
     @param inn: инн компании (inn company)
     @return: Data Frame с новыми данными ( Data Frame with new data);
     """
+
     delay = 2
     logger.info(f'Start_check_inn - {inn}')
     try:
@@ -114,21 +110,14 @@ def check_response(
         return df
 
 
-def work_selenium(
-        logger: object = logging,
-        inn_list: object = list,
-        index_inn_list: int = 0,
-        df_verified_inn: object = pd.DataFrame()) -> pd.DataFrame:
+def work_selenium(logger: object = logging, inn_list: object = list, index_inn_list: int = 0, df_verified_inn: object = pd.DataFrame()) -> pd.DataFrame:
     """
-    Функция работы selenium;
-    Selenium work function;
+    Функция работы selenium (Selenium work function)
     @param logger: настройки логгирования (logging settings);
     @param inn_list: список с инн компаний (list with inn of companies);
     @param index_inn_list: индекс списка inn_list,
-    с которого начнется новая проверка;
-    (the index of the inn_list from which the new check will start);
-    @param df_verified_inn: Data Frame для записи результатов
-    (Data Frame for recording results);
+    с которого начнется новая проверка; (the index of the inn_list from which the new check will start);
+    @param df_verified_inn: Data Frame для записи результатов (Data Frame for recording results);
     @return: Data Frame с результатами проверки (Data Frame with test results);
     """
 
