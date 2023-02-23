@@ -40,7 +40,7 @@ def read_csv_inn_com(logger: object = logging) -> list | bool:
     Функция для получения инн компаний из csv-файла;
     Function to get company TIN from csv file;
 
-    :return: inn_list - список инн компаний (list of inn companies);
+    :return: inn_list: список инн компаний (list of inn companies);
     """
 
     logger.info('Start reading file from inn')
@@ -56,6 +56,28 @@ def read_csv_inn_com(logger: object = logging) -> list | bool:
     except Exception as Error_read:
         logger.exception(f'Error while reading file. {Error_read}')
         return False
+
+
+def input_data(driver: object = webdriver, delay=10, inn: object = int):
+    """
+    Функция для ввода информации в форму поиска
+    Function for entering information into the search form
+
+    :param driver: элемент класса браузера (browser class element);
+    :param delay: время задержки для поиска (delay time for search)
+    :param inn: инн компании (inn company)
+    """
+    try:
+        logger.info(f'Data_entry_{inn}')
+        elem_search_string = WebDriverWait(driver, delay) \
+            .until(EC.presence_of_element_located(
+            (By.XPATH, "//input[@class='search-input ng-untouched ng-pristine ng-valid']")))
+        elem_search_string.clear()
+        elem_search_string.send_keys(inn)
+        elem_search_string.send_keys(Keys.ENTER)
+        logger.info(f'Successful_search_{inn}')
+    except Exception as exp:
+        logger.exception(f'Data entry error: {exp}')
 
 
 def check_response(driver: object = webdriver, df: object = pd.DataFrame, inn: object = int) -> pd.DataFrame:
@@ -110,7 +132,31 @@ def check_response(driver: object = webdriver, df: object = pd.DataFrame, inn: o
         return df
 
 
-def work_selenium(logger: object = logging, inn_list: object = list, index_inn_list: int = 0, df_verified_inn: object = pd.DataFrame()) -> pd.DataFrame:
+def connect_web():
+    """
+    Создаем элемент класса webdriver
+    :return: driver: элемент класса webdriver
+    """
+
+    try:
+        logger.info('Driver setup and site connection')
+
+        path_driver = r'Drivers\chromedriver_win32\chromedriver.exe'
+        driver = webdriver.Chrome(executable_path=path_driver)
+
+        logger.info('Connection succeeded')
+        return driver
+
+    except Exception as Error_connect_selenium:
+        logger.exception(f'Error connecting to site. {Error_connect_selenium}')
+        return False
+
+
+def work_selenium(logger: object = logging,
+                  inn_list: object = list,
+                  index_inn_list: int = 0,
+                  df_verified_inn: object = pd.DataFrame()
+                  ) -> pd.DataFrame:
     """
     Функция работы selenium (Selenium work function)
     @param logger: настройки логгирования (logging settings);
@@ -121,17 +167,7 @@ def work_selenium(logger: object = logging, inn_list: object = list, index_inn_l
     @return: Data Frame с результатами проверки (Data Frame with test results);
     """
 
-    try:
-        logger.info('Driver setup and site connection')
-
-        path_driver = r'Drivers\chromedriver_win32\chromedriver.exe'
-        driver = webdriver.Chrome(executable_path=path_driver)
-
-        logger.info('Connection succeeded')
-
-    except Exception as Error_connect_selenium:
-        logger.exception(f'Error connecting to site. {Error_connect_selenium}')
-        return False
+    driver = connect_web()
 
     try:
         logger.info(f'Getting started with the site {index_inn_list}')
@@ -140,15 +176,8 @@ def work_selenium(logger: object = logging, inn_list: object = list, index_inn_l
         while index_inn_list < len(inn_list):
             try:
                 inn = inn_list[index_inn_list]
+                input_data(driver, delay, inn)
                 logger.info(f'Search_inn_{inn}')
-                elem_search_string = WebDriverWait(driver, delay)\
-                    .until(EC.presence_of_element_located((By.XPATH, "//input[@class='search-input ng-untouched ng-pristine ng-valid']")))
-                elem_search_string.clear()
-                elem_search_string.send_keys(inn)
-                elem_search_string.click()
-                elem_search_string.send_keys(Keys.ENTER)
-                elem_search_string.send_keys(Keys.ENTER)
-
                 df_verified_inn = check_response(driver, df_verified_inn, inn)
 
                 logger.info(f'Back_in_search_string - {inn}')
