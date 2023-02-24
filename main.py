@@ -152,6 +152,18 @@ def connect_web():
         return False
 
 
+def back_in_input_form(driver: object = webdriver, delay=10):
+    """
+    Функция для возврата к полю ввода
+    :param driver: элемент класса браузера (browser class element);
+    :param delay: время задержки для поиска (delay time for search)
+    """
+
+    elem_return_button = WebDriverWait(driver, delay).until(
+        EC.presence_of_element_located((By.XPATH, "//a[@class='link-plain small']")))
+    elem_return_button.click()
+
+
 def work_selenium(logger: object = logging,
                   inn_list: object = list,
                   index_inn_list: int = 0,
@@ -176,19 +188,21 @@ def work_selenium(logger: object = logging,
         while index_inn_list < len(inn_list):
             try:
                 inn = inn_list[index_inn_list]
-                input_data(driver, delay, inn)
+
+                # Вводим данные в форму ввода
                 logger.info(f'Search_inn_{inn}')
+                input_data(driver, delay, inn)
+
+                # Записывает результат поиска
                 df_verified_inn = check_response(driver, df_verified_inn, inn)
 
+                # Возвращаемся к полю ввода
                 logger.info(f'Back_in_search_string - {inn}')
-                elem_return_button = WebDriverWait(driver, delay).until(
-                    EC.presence_of_element_located((By.XPATH, "//a[@class='link-plain small']")))
-                elem_return_button.click()
+                back_in_input_form(driver, delay)
 
                 index_inn_list += 1
                 if index_inn_list % 50 == 0:
                     driver.close()
-                    logger.info(f'new_crusade')
                     time.sleep(60)
                     return work_selenium(logger, inn_list, index_inn_list, df_verified_inn)
 
